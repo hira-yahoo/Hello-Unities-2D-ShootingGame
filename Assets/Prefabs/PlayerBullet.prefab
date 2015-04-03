@@ -9,7 +9,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 473818}
   - 212: {fileID: 21273818}
-  m_Layer: 0
+  - 60: {fileID: 6027026}
+  m_Layer: 10
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +27,7 @@ GameObject:
   - 4: {fileID: 473820}
   - 50: {fileID: 5073818}
   - 114: {fileID: 11432312}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PlayerBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +43,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 473822}
   - 212: {fileID: 21273820}
-  m_Layer: 0
+  - 60: {fileID: 6051548}
+  m_Layer: 10
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 173820}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.59562731, y: -.412112415, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 473822}
@@ -102,6 +104,44 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!60 &6027026
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 173818}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Poly:
+    m_Paths:
+    - - {x: -.0123928636, y: .0821219385}
+      - {x: .0132454783, y: .0819995999}
+      - {x: .0314119011, y: .027528435}
+      - {x: .031074658, y: .0115039647}
+      - {x: .00824512541, y: -.0827246606}
+      - {x: -.0101805776, y: -.0818962753}
+      - {x: -.0310423225, y: .0187884271}
+      - {x: -.0318512768, y: .0400902629}
+--- !u!60 &6051548
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 173822}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Poly:
+    m_Paths:
+    - - {x: -.0123928636, y: .0821219385}
+      - {x: .0132454783, y: .0819995999}
+      - {x: .0314119011, y: .027528435}
+      - {x: .031074658, y: .0115039647}
+      - {x: .00824512541, y: -.0827246606}
+      - {x: -.0101805776, y: -.0818962753}
+      - {x: -.0310423225, y: .0187884271}
+      - {x: -.0318512768, y: .0400902629}
 --- !u!114 &11432312
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -114,6 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  lifeTime: 1
 --- !u!212 &21273818
 SpriteRenderer:
   m_ObjectHideFlags: 1
