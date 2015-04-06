@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Enemy : MonoBehaviour {
 
+	public int hp = 1;
+
 	Spaceship spaceship;
 
 	// Use this for initialization
@@ -42,11 +44,19 @@ public class Enemy : MonoBehaviour {
 		if (layerName != "Bullet(Player)")
 			return;
 
+		Transform playerBulletTransform = c.transform.parent;
+
+		Bullet bullet = playerBulletTransform.GetComponent<Bullet> ();
+
+		hp -= bullet.power;
+
 		Destroy (c.gameObject);
 
-		spaceship.Explosion ();
+		if (hp <= 0) {
+			spaceship.Explosion ();
 
-		Destroy (gameObject);
+			Destroy (gameObject);
+		}
 	}
 
 	// Update is called once per frame
