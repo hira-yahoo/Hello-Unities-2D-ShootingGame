@@ -942,7 +942,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 173974, guid: ca8e698cc4a734d4eae882af34c162d8, type: 2}
+  - {fileID: 146100, guid: 9add7e91996bba3479b037e6ff1920ea, type: 2}
+  - {fileID: 174142, guid: c291cd456995c3b4ba635acc799b7df9, type: 2}
+  - {fileID: 116718, guid: 36723ac66343b1948969239b3d08f0b6, type: 2}
+  - {fileID: 117608, guid: 35f6481f7988db349a5837a72369b38b, type: 2}
+  - {fileID: 135402, guid: 9a071cfcbcc6afe4d8ba9df7b2da285b, type: 2}
 --- !u!4 &1733152365
 Transform:
   m_ObjectHideFlags: 0
