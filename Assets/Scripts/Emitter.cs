@@ -7,6 +7,8 @@ public class Emitter : MonoBehaviour {
 
 	private int currentWave;
 
+	private Manager manager;
+
 	// Use this for initialization
 	IEnumerator Start () {
 	
@@ -14,17 +16,23 @@ public class Emitter : MonoBehaviour {
 			yield break;
 		}
 
+		manager = FindObjectOfType<Manager> ();
+
 		while (true) {
 
-			GameObject wave = (GameObject)Instantiate (waves[currentWave], transform.position, Quaternion.identity);
-
-			wave.transform.parent = transform;
-
-			while (wave.transform.childCount != 0) {
+			while (manager.IsPlaying() == false) {
 				yield return new WaitForEndOfFrame();
 			}
 
-			Destroy (wave);
+			GameObject g = (GameObject)Instantiate (waves[currentWave], transform.position, Quaternion.identity);
+
+			g.transform.parent = transform;
+
+			while (g.transform.childCount != 0) {
+				yield return new WaitForEndOfFrame();
+			}
+
+			Destroy (g);
 
 			if (waves.Length <= ++currentWave) {
 				currentWave = 0;
